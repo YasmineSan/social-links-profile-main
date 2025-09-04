@@ -1,0 +1,111 @@
+/* color & sizes */
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+    --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+}
+
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+    font-family: Inter;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--grey-900);
+  color: var(--white);
+}
+
+main {
+  width: min(92vw, 20rem);
+  border-radius: 2%;
+  background-color: var(--grey-800);
+}
+
+section {
+  padding: clamp(5px, 5%, 5px);
+}
+
+img {
+  border-radius: 50%;
+  width: clamp(25%, 15vw, 30%);
+  margin: clamp(10px, 5%, 20px);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li a {
+  display: block;
+  padding: var(--space-sm);
+  margin: 1rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  background-color: var(--grey-700);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li a:hover {
+  background-color: var(--green);
+  color: var(--grey-900);
+  cursor: pointer;
+}
+.social-links {
+  width: 100%;
+}
+
+/* text */
+h1 {
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+h2 {
+  color: var(--green);
+  font-weight: 600;
+}
+
+p,
+h2 {
+  font-size: var(--text-sm);
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-size: var(--text-sm);
+  margin-top: 1.25rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--green);
+}
